@@ -1,0 +1,11 @@
+C:\Users\Juan Pablo\source\repos\Cifrado\Cifrado\bin\Debug\netcoreapp2.1\Cifrado.deps.json
+C:\Users\Juan Pablo\source\repos\Cifrado\Cifrado\bin\Debug\netcoreapp2.1\Cifrado.runtimeconfig.json
+C:\Users\Juan Pablo\source\repos\Cifrado\Cifrado\bin\Debug\netcoreapp2.1\Cifrado.runtimeconfig.dev.json
+C:\Users\Juan Pablo\source\repos\Cifrado\Cifrado\bin\Debug\netcoreapp2.1\Cifrado.dll
+C:\Users\Juan Pablo\source\repos\Cifrado\Cifrado\bin\Debug\netcoreapp2.1\Cifrado.pdb
+C:\Users\Juan Pablo\source\repos\Cifrado\Cifrado\obj\Debug\netcoreapp2.1\Cifrado.csprojAssemblyReference.cache
+C:\Users\Juan Pablo\source\repos\Cifrado\Cifrado\obj\Debug\netcoreapp2.1\Cifrado.csproj.CoreCompileInputs.cache
+C:\Users\Juan Pablo\source\repos\Cifrado\Cifrado\obj\Debug\netcoreapp2.1\Cifrado.AssemblyInfoInputs.cache
+C:\Users\Juan Pablo\source\repos\Cifrado\Cifrado\obj\Debug\netcoreapp2.1\Cifrado.AssemblyInfo.cs
+C:\Users\Juan Pablo\source\repos\Cifrado\Cifrado\obj\Debug\netcoreapp2.1\Cifrado.dll
+C:\Users\Juan Pablo\source\repos\Cifrado\Cifrado\obj\Debug\netcoreapp2.1\Cifrado.pdb
