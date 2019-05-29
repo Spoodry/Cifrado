@@ -8,8 +8,13 @@ namespace Cifrado
         {
             Cesar cesar = new Cesar(6);
 
-            Console.WriteLine(cesar.Encriptar("WIKIPEDIA, LA ENCICLOPEDIA LIBRE"));
+            string cifrado = cesar.Cifrar("WIKIPEDIA, LA ENCICLOPEDIA LIBRE", Cesar.Tipo.Encriptar);
 
+            Console.WriteLine(cifrado);
+
+            Console.WriteLine(cesar.Cifrar(cifrado, Cesar.Tipo.Desencriptar));
+
+            Cesar.Imprimir();
 
         }
     }

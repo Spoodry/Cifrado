@@ -10,53 +10,46 @@ namespace Cifrado
         private int desplazamiento;
         private static string alfabeto = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
 
-        enum TipoDesplazamiento
-        {
-            Derecha,
-            Izquierda
-        }
-
         public Cesar(int desplazamiento)
         {
             this.desplazamiento = desplazamiento;
         }
 
-        public string Encriptar(string cadena)
-        {
+        public string Cifrar(string cadena, Tipo tipo) {
+
             string nuevo = "";
 
-            for(int i = 0; i < cadena.Length; i++)
-            {
-                if (!EsLetra(cadena[i]))
-                {
-                    nuevo += cadena[i];
-                }
-                else
-                {
-                    nuevo += alfabeto[ObtenerPosicion(cadena[i], TipoDesplazamiento.Derecha)];
-                }
-            }
-            
-            return nuevo;
-        }
-
-        public string Desencriptar(string cadena)
-        {
-            string nuevo = "";
-
-            for(int i = 0; i < cadena.Length; i++)
-            {
-                if (!EsLetra(cadena[i]))
-                {
-                    nuevo += cadena[i];
-                }
-                else
-                {
-                    nuevo += alfabeto[ObtenerPosicion(cadena[i], TipoDesplazamiento.Izquierda)];
-                }
+            switch(tipo) {
+                case Tipo.Encriptar:
+                    for(int i = 0; i < cadena.Length; i++)
+                    {
+                        if (!EsLetra(cadena[i]))
+                        {
+                            nuevo += cadena[i];
+                        }
+                        else
+                        {
+                            nuevo += alfabeto[ObtenerPosicion(cadena[i], TipoDesplazamiento.Derecha)];
+                        }
+                    }
+                break;
+                case Tipo.Desencriptar:
+                    for(int i = 0; i < cadena.Length; i++)
+                    {
+                        if (!EsLetra(cadena[i]))
+                        {
+                            nuevo += cadena[i];
+                        }
+                        else
+                        {
+                            nuevo += alfabeto[ObtenerPosicion(cadena[i], TipoDesplazamiento.Izquierda)];
+                        }
+                    }
+                break;
             }
 
             return nuevo;
+
         }
 
         private int ObtenerPosicion(char letra, TipoDesplazamiento e)
@@ -103,6 +96,21 @@ namespace Cifrado
             }
 
             return band;
+        }
+        
+        enum TipoDesplazamiento
+        {
+            Derecha,
+            Izquierda
+        }
+
+        public enum Tipo{
+            Encriptar,
+            Desencriptar
+        }
+
+        public static void Imprimir() {
+            
         }
 
     }

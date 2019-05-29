@@ -1,30 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Juan Pablo\\source\\repos\\Cifrado\\Cifrado\\Cifrado.csproj": {}
+    "/home/site/Documentos/Cifrado/Cifrado/Cifrado.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Juan Pablo\\source\\repos\\Cifrado\\Cifrado\\Cifrado.csproj": {
+    "/home/site/Documentos/Cifrado/Cifrado/Cifrado.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Juan Pablo\\source\\repos\\Cifrado\\Cifrado\\Cifrado.csproj",
+        "projectUniqueName": "/home/site/Documentos/Cifrado/Cifrado/Cifrado.csproj",
         "projectName": "Cifrado",
-        "projectPath": "C:\\Users\\Juan Pablo\\source\\repos\\Cifrado\\Cifrado\\Cifrado.csproj",
-        "packagesPath": "C:\\Users\\Juan Pablo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Juan Pablo\\source\\repos\\Cifrado\\Cifrado\\obj\\",
+        "projectPath": "/home/site/Documentos/Cifrado/Cifrado/Cifrado.csproj",
+        "packagesPath": "/home/site/.nuget/packages/",
+        "outputPath": "/home/site/Documentos/Cifrado/Cifrado/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Juan Pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/site/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -42,6 +40,7 @@
         "netcoreapp2.1": {
           "dependencies": {
             "Microsoft.NETCore.App": {
+              "suppressParent": "All",
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
