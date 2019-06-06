@@ -11,6 +11,7 @@ namespace Cifrado
         private static string alfabetoMay = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
         private static string alfabetoMin = alfabetoMay.ToLower();
         private static string numeros = "0123456789";
+        private static string caracteres = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 
         public Cesar(int desplazamiento)
         {
@@ -32,8 +33,8 @@ namespace Cifrado
                                     TipoDesplazamiento.Derecha)];
                             } 
                             else {
-                                nuevo += (char)ObtenerPosicion(cadena[i], TipoCaracter.Simbolo,
-                                    TipoDesplazamiento.Derecha);
+                                nuevo += caracteres[ObtenerPosicion(cadena[i], TipoCaracter.Simbolo,
+                                    TipoDesplazamiento.Derecha)];
                             }
                         }
                         else
@@ -64,8 +65,8 @@ namespace Cifrado
                             }
                             else 
                             {
-                                nuevo += (char)ObtenerPosicion(cadena[i], TipoCaracter.Simbolo,
-                                    TipoDesplazamiento.Izquierda);
+                                nuevo += caracteres[ObtenerPosicion(cadena[i], TipoCaracter.Simbolo,
+                                    TipoDesplazamiento.Izquierda)];
                             }
                         }
                         else
@@ -94,21 +95,27 @@ namespace Cifrado
         {
             int posicion = 0;
 
-            if(t == TipoCaracter.Letra || t == TipoCaracter.Numero)
-                for (int i = 0; i < alfabetoMay.Length; i++)
-                {
+            for (int i = 0; i < caracteres.Length; i++)
+            {
+                if(caracter.Equals(caracteres[i])) {
+                    posicion = i;
+                    break;
+                }
+
+                if(i < alfabetoMay.Length)
                     if (caracter.Equals(alfabetoMay[i]) || caracter.Equals(alfabetoMin[i]))
                     {
                         posicion = i;
                         break;
                     }
-                    if(i < numeros.Length)
-                        if(caracter.Equals(numeros[i]))
-                        {
-                            posicion = i;
-                            break;
-                        }
-                }
+
+                if(i < numeros.Length)
+                    if(caracter.Equals(numeros[i]))
+                    {
+                        posicion = i;
+                        break;
+                    }
+            }
 
             switch(t) 
             {
@@ -141,12 +148,12 @@ namespace Cifrado
                 case TipoCaracter.Simbolo:
                     switch(e) {
                         case TipoDesplazamiento.Derecha:
-                            posicion = (int)caracter + desplazamiento;
-                            posicion = (posicion > 256 - 1) ? (posicion - 256) : posicion;
+                            posicion += desplazamiento;
+                            posicion = (posicion > caracteres.Length - 1) ? (posicion - caracteres.Length) : posicion;
                         break;
                         case TipoDesplazamiento.Izquierda:
-                            posicion = (int)caracter - desplazamiento;
-                            posicion = (posicion < 0) ? (256 - Math.Abs(posicion)) : posicion;
+                            posicion -= desplazamiento;
+                            posicion = (posicion < 0) ? (caracteres.Length - Math.Abs(posicion)) : posicion;
                         break;
                     }
                 break;

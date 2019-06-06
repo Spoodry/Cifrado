@@ -8,7 +8,9 @@ namespace Cifrado
         {
             Cesar cesar = new Cesar(6);
 
-            string cifrado = cesar.Cifrar("Juan Pablo Altamirano Flores, 2798", Cesar.TipoCifrado.Encriptar);
+            string cadena = "Juan Pablo Altamirano Flores, 2798";
+
+            string cifrado = cesar.Cifrar(cadena, Cesar.TipoCifrado.Encriptar);
 
             Console.WriteLine(cifrado);
 
