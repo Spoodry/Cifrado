@@ -8,8 +8,13 @@ namespace Cifrado
         {
             Cesar cesar = new Cesar(6);
 
-            Console.WriteLine(cesar.Encriptar("WIKIPEDIA, LA ENCICLOPEDIA LIBRE"));
+            string cadena = "Juan Pablo Altamirano Flores, 2798";
 
+            string cifrado = cesar.Cifrar(cadena, Cesar.TipoCifrado.Encriptar);
+
+            Console.WriteLine(cifrado);
+
+            Console.WriteLine(cesar.Cifrar(cifrado, Cesar.TipoCifrado.Desencriptar));
 
         }
     }
